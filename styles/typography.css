@@ -1,0 +1,32 @@
+/* styles/typography.css
+   Adds consistent padding for headings and paragraphs
+*/
+
+:root {
+  --type-padding-vertical: 0.75rem;
+  --type-padding-horizontal: 1rem;
+  --type-margin-vertical: 0.5rem;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  padding: var(--type-padding-vertical) var(--type-padding-horizontal);
+  margin: var(--type-margin-vertical) 0;
+  line-height: 1.2;
+}
+
+p {
+  padding: calc(var(--type-padding-vertical) / 2) var(--type-padding-horizontal);
+  margin: 0 0 1rem 0;
+}
+
+/* Utility class for other block-level types */
+.padded {
+  padding: var(--type-padding-vertical) var(--type-padding-horizontal);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --type-padding-vertical: 1rem;
+    --type-padding-horizontal: 1.5rem;
+  }
+}
