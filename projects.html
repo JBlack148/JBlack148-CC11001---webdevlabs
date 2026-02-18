@@ -50,7 +50,7 @@
         <section class="row g-4">
 
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <div class="card h-100 shadow-sm">
                     <img src="img/server.jpg" class="card-img-top" alt="Home server rack setup">
 
@@ -77,7 +77,7 @@
             </div>
 
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-4">
                 <div class="card h-100 shadow-sm">
                     <img src="img/maze.PNG" class="card-img-top" alt="Maze generator and solver project">
 
@@ -86,13 +86,42 @@
 
                         <p class="card-text">
                             A simple maze generator that randomly generates mazes of a size chosen. This generation
-                            using an iterative backtracking algorithm. If the user requests to see the maze solved then it
-                            will be solved using A* search. This was written in python as my project for advanced higher computer science,
+                            using an iterative backtracking algorithm. If the user requests to see the maze solved then
+                            it
+                            will be solved using A* search. This was written in python as my project for advanced higher
+                            computer science,
                             using libraries such as turtle for the graphics, random for the generation and heapq for the
                             A* search. I also made my own stack linked list. This project was linked to a database, so
                             that the mazes could be stored and retrieved. The mazes were converted
-                            to a binary string and stored in a blob in the database, the reverse conversion is performed when retrieving
+                            to a binary string and stored in a blob in the database, the reverse conversion is performed
+                            when retrieving
                             a saved maze. This was done using SQL and php. I achieved an A grade for this project.
+                        </p>
+
+                        <!-- <a href="#" class="btn btn-primary mt-auto">
+                            Go somewhere
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/ledmatrix.jpg" class="card-img-top" alt="LED matrix morse code display project">
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Morse code translator</h5>
+
+                        <p class="card-text">
+                            This is a morse code decoder running on a raspberry pi. You can tap morse code on the button
+                            and it gets decoded into letters and then published on an MQTT server. The morse code is
+                            then taken from the MQTT server and displayed on an LED matrix as seen on the thumbnail.
+                            There was alot of trial and error in this project as there was no available documentation on
+                            our specific dot matrix display, so I had to test each pin to find out which was which. I
+                            also made custom 2d arrays to be displayed on the LED matrix for each character. Through
+                            this project I learned about cross ghosting on LED matrices and how to mitigate it, as well
+                            as how to use the RPi.GPIO library to read input from the button and control the LED matrix.
+                            I also learned about MQTT and how to use HiveMQ as a broker.
                         </p>
 
                         <!-- <a href="#" class="btn btn-primary mt-auto">
