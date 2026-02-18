@@ -1,46 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Projects | Joe Blackmore</title>
+
     <link href="styles/typography.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="js/theme.js"></script>
 </head>
 
 <body>
-    <div class="container mt-5">
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Joe Blackmore</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fw-bold" href="projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="experience.html">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="education.html">Education</a>
-                </li>
-            </ul>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Joe Blackmore</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="experience.html">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="education.html">Education</a>
+                    </li>
+                </ul>
+            </div>
+
+            <button id="themeToggle" class="btn btn-outline-secondary">
+                Toggle Dark Mode
+            </button>
         </div>
     </nav>
 
-    <header>
-    </header>
-    <main>
-        <p></p>
+
+    <main class="container py-5">
+        <section class="row g-4">
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/server.jpg" class="card-img-top" alt="Home server rack setup">
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Home Servers</h5>
+
+                        <p class="card-text">
+                            I run multiple services at home on my servers so that I can understand
+                            networking in a hands-on way.</p>
+
+                        <p class="card-text">Services include:</p>
+                        <ul>
+                            <li>Proxmox (VM's and containers)</li>
+                            <li>Open media vault (File storage)</li>
+                            <li>Jellyfin (Media server)</li>
+                            <li>Tailscale (Remote access)</li>
+                        </ul>
+
+                        <!-- <a href="#" class="btn btn-primary mt-auto">
+                            Go somewhere
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/maze.PNG" class="card-img-top" alt="Maze generator and solver project">
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Maze Generator / Solver</h5>
+
+                        <p class="card-text">
+                            A simple maze generator that randomly generates mazes of a size chosen. This generation
+                            using an iterative backtracking algorithm. If the user requests to see the maze solved then
+                            it
+                            will be solved using A* search. This was written in python as my project for advanced higher
+                            computer science,
+                            using libraries such as turtle for the graphics, random for the generation and heapq for the
+                            A* search. I also made my own stack linked list. This project was linked to a database, so
+                            that the mazes could be stored and retrieved. The mazes were converted
+                            to a binary string and stored in a blob in the database, the reverse conversion is performed
+                            when retrieving
+                            a saved maze. This was done using SQL and php. I achieved an A grade for this project.
+                        </p>
+
+                        <!-- <a href="#" class="btn btn-primary mt-auto">
+                            Go somewhere
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/ledmatrix.jpg" class="card-img-top" alt="LED matrix morse code display project">
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Morse code translator</h5>
+
+                        <p class="card-text">
+                            This is a morse code decoder running on a raspberry pi. You can tap morse code on the button
+                            and it gets decoded into letters and then published on an MQTT server. The morse code is
+                            then taken from the MQTT server and displayed on an LED matrix as seen on the thumbnail.
+                            There was alot of trial and error in this project as there was no available documentation on
+                            our specific dot matrix display, so I had to test each pin to find out which was which. I
+                            also made custom 2d arrays to be displayed on the LED matrix for each character. Through
+                            this project I learned about cross ghosting on LED matrices and how to mitigate it, as well
+                            as how to use the RPi.GPIO library to read input from the button and control the LED matrix.
+                            I also learned about MQTT and how to use HiveMQ as a broker.
+                        </p>
+
+                        <!-- <a href="#" class="btn btn-primary mt-auto">
+                            Go somewhere
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+
+        </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
