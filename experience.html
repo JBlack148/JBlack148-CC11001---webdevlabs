@@ -13,70 +13,91 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Joe Blackmore</a>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Main navigation">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Joe Blackmore</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="experience.html">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link fw-bold" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    </ul>
+                </div>
+
+                <button id="themeToggle" class="btn btn-outline-secondary">
+                    Toggle Dark Mode
+                </button>
             </div>
+        </nav>
+    </header>
 
-            <button id="themeToggle" class="btn btn-outline-secondary">
-                Toggle Dark Mode
-            </button>
-        </div>
-    </nav>
-
+    
     <main class="container py-5">
-        <div class="row g-4">
+        <section aria-labelledby="experience-heading">
+            <div class="row g-4">
 
-            <div class="col-12 col-lg-7">
-                <h2>Front of House / Bar Supervisor</h2>
-                <h3 class="text-muted fs-5">Longforgan Coaching Inn | 11/7/2025 – Present</h3>
+                
+                <article class="col-12 col-lg-7">
+                    <header>
+                        <h2 id="experience-heading">Front of House / Bar Supervisor</h2>
+                        <p class="text-muted fs-5">
+                            <strong>Longforgan Coaching Inn</strong> |
+                            <time datetime="2025-07-11">11 July 2025</time> – 
+                            <time datetime="present">Present</time>
+                        </p>
+                    </header>
 
-                <p>
-                    Part-time role alongside computing studies and career development,
-                    involving operational responsibility within a busy pub, restaurant,
-                    and hotel environment.
-                </p>
+                    <p>
+                        Part-time role alongside computing studies and career development,
+                        involving operational responsibility within a busy pub, restaurant,
+                        and hotel environment.
+                    </p>
 
-                <ul>
-                    <li>Supervisor-level system access including EPOS configuration</li>
-                    <li>Sole staff member on duty during kitchen closure periods</li>
-                    <li>Manage keg changes, gas handling, and beer line cleaning</li>
-                    <li>Oversee daily operations and service delivery</li>
-                    <li>Manage the Inn’s social media content and event advertising</li>
-                    <li>Demonstrate strong communication and adaptability</li>
-                </ul>
+                    <ul>
+                        <li>Supervisor-level system access including EPOS configuration</li>
+                        <li>Sole staff member on duty during kitchen closure periods</li>
+                        <li>Manage keg changes, gas handling, and beer line cleaning</li>
+                        <li>Oversee daily operations and service delivery</li>
+                        <li>Manage the Inn’s social media content and event advertising</li>
+                        <li>Demonstrate strong communication and adaptability</li>
+                    </ul>
+                </article>
+
+                
+                <article class="col-12 col-lg-5">
+                    <header>
+                        <h2>Bowling Club Barman</h2>
+                        <p class="text-muted fs-5">
+                            <strong>Longforgan Bowling Club</strong> |
+                            <time datetime="2025-06">June 2025</time> – 
+                            <time datetime="present">Present</time>
+                        </p>
+                    </header>
+
+                    <p>
+                        Part-time volunteering role in a community bowling club.
+                    </p>
+
+                    <ul>
+                        <li>Sole bar staff during shifts</li>
+                        <li>Keyholder responsible for premises security</li>
+                        <li>Cash and card reconciliation</li>
+                        <li>Professional customer service</li>
+                        <li>Maintain a clean and organised bar</li>
+                    </ul>
+                </article>
+
             </div>
-
-            <div class="col-12 col-lg-5">
-                <h2>Bowling Club Barman</h2>
-                <h3 class="text-muted fs-5">Longforgan Bowling Club | 06/2025 – Present</h3>
-
-                <p>
-                    Part-time volunteering role in a community bowling club.
-                </p>
-
-                <ul>
-                    <li>Sole bar staff during shifts</li>
-                    <li>Keyholder responsible for premises security</li>
-                    <li>Cash and card reconciliation</li>
-                    <li>Professional customer service</li>
-                    <li>Maintain a clean and organised bar</li>
-                </ul>
-            </div>
-
-        </div>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

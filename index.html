@@ -13,42 +13,56 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Joe Blackmore</a>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Joe Blackmore</a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    </ul>
+                </div>
+
+                <button id="themeToggle" class="btn btn-outline-secondary">
+                    Toggle Dark Mode
+                </button>
             </div>
-
-            <button id="themeToggle" class="btn btn-outline-secondary">
-                Toggle Dark Mode
-            </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <main class="container py-5">
-        <h2 class="mb-4">About Me</h2>
+        <section aria-labelledby="about-heading">
+            <h2 id="about-heading" class="mb-4">About Me</h2>
 
-        <p>
-            My name is Joe Blackmore, and I am a student at the University of Dundee.
-            I am currently studying Computer Science and have a keen interest in networking,
-            operating systems, and software development.
-        </p>
+            <p>
+                My name is Joe Blackmore, and I am a student at the University of Dundee.
+                I am currently studying Computer Science and have a keen interest in networking,
+                operating systems, and software development.
+            </p>
 
-        <p>
-            I enjoy working on my homelab and building my own network infrastructure.
-            I hold a clean full driver's licence.
-        </p>
+            <p>
+                I enjoy working on my homelab and building my own network infrastructure.
+                I hold a clean full driver's licence.
+            </p>
+        </section>
+
+        <section aria-labelledby="contact-heading">
+            <h3 id="contact-heading">Contact Information</h3>
+            <address>
+                <ul>
+                    <li>Email: <a href="mailto:joeblackmore@company.co">joeblackmore@company.co</a></li>
+                    <li>GitHub: <a href="https://github.com/JBlack148">JBlack148</a></li>
+                </ul>
+            </address>
+        </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
