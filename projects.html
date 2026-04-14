@@ -51,7 +51,7 @@
             <h2 id="projects-heading" class="visually-hidden">Projects</h2>
             <div class="row g-4">
 
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-4">
                     <article class="card h-100 shadow-sm">
                         <img src="img/server.jpg" class="card-img-top" alt="Home server rack setup">
 
@@ -59,7 +59,7 @@
                             <h3 class="card-title h5">Homelab</h3>
 
                             <p class="card-text">
-                                I run multiple services at home on my servers so that I can understand
+                                I run multiple services at home on my servers with k3s so that I can understand
                                 networking in a hands-on way.</p>
 
                             <p class="card-text">Services include:</p>
@@ -69,21 +69,16 @@
                                 <li>Jellyfin (Media server)</li>
                                 <li>Tailscale (Remote access)</li>
                             </ul>
-                            <p class="card-text">Layout:</p>
-                            <p class="card-text">I currently have 2 HP elitedesk minis in a 10" server rack connected to
-                                a switch. The top elitedesk has a virtualised nas (openmediavault) which is 1tb RAID 1
-                                (mirrored) storage with nfs and smb sharing. Also on that machine is a virtualised k3s
-                                control plane. The second machine is used as a worker as it has 3 virtualised k3s worker
-                                nodes, I virtualised these just to get the experience of setting up kubernetes with
-                                multiple nodes. I then have jellyfin and tailscale running as services on the k3s
-                                cluster.</p>
-                            <p class="card-text">Expansion:</p>
-                            <p class="card-text">I plan to get more sff machines for this rack. I will use 1 as a router
-                                above the switch running opnsense as i havent worked with any routers yet and i think it
-                                would be enjoyale and good to know. I also plan to get more machines which i will use
-                                for more k3s nodes which I will then turn all workers into baremetal instead of
-                                virtualised.</p>
 
+                            <h4 class="h6 mt-2">Skills:</h4>
+                            <ul class="list-unstyled small">
+                                <li>Network Administration</li>
+                                <li>Virtualization</li>
+                                <li>Linux Systems</li>
+                                <li>Container Orchestration</li>
+                            </ul>
+
+                            <a href="homelab.html" class="btn btn-primary mt-3">Read More</a>
                         </div>
                     </article>
                 </div>
@@ -96,27 +91,23 @@
                             <h3 class="card-title h5">Maze Generator / Solver</h3>
 
                             <p class="card-text">
-                                A simple maze generator that randomly generates mazes of a size chosen. This generation
-                                using an iterative backtracking algorithm. If the user requests to see the maze solved
-                                then
-                                it will be solved using A* search. This was written in python as my project for advanced
-                                higher
-                                computer science, using libraries such as turtle for the graphics, random for the
-                                generation
-                                and heapq for the A* search. I also made my own stack linked list. This project was
-                                linked to
-                                a database, so that the mazes could be stored and retrieved. The mazes were converted to
-                                a
-                                binary string and stored in a blob in the database, the reverse conversion is performed
-                                when
-                                retrieving a saved maze. This was done using SQL and php. I achieved an A grade for this
-                                project.
+                                A Python maze generator using backtracking algorithm with A* solver, database integration, and turtle graphics.
                             </p>
+
+                            <h4 class="h6 mt-2">Skills:</h4>
+                            <ul class="list-unstyled small">
+                                <li>Python Programming</li>
+                                <li>Algorithm Design</li>
+                                <li>Database Integration</li>
+                                <li>Graphics Programming</li>
+                            </ul>
+
+                            <a href="maze.html" class="btn btn-primary mt-3">Read More</a>
                         </div>
                     </article>
                 </div>
 
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-4">
                     <article class="card h-100 shadow-sm">
                         <img src="img/ledmatrix.jpg" class="card-img-top" alt="LED matrix morse code display project">
 
@@ -124,21 +115,18 @@
                             <h3 class="card-title h5">Morse code translator</h3>
 
                             <p class="card-text">
-                                This is a morse code decoder running on a raspberry pi. You can tap morse code on the
-                                button
-                                and it gets decoded into letters and then published on an MQTT server. The morse code is
-                                then taken from the MQTT server and displayed on an LED matrix as seen on the thumbnail.
-                                There was alot of trial and error in this project as there was no available
-                                documentation on
-                                our specific dot matrix display, so I had to test each pin to find out which was which.
-                                I
-                                also made custom 2d arrays to be displayed on the LED matrix for each character. Through
-                                this project I learned about cross ghosting on LED matrices and how to mitigate it, as
-                                well
-                                as how to use the RPi.GPIO library to read input from the button and control the LED
-                                matrix.
-                                I also learned about MQTT and how to use HiveMQ as a broker.
+                                Raspberry Pi morse code decoder that displays letters on an LED matrix via MQTT.
                             </p>
+
+                            <h4 class="h6 mt-2">Skills:</h4>
+                            <ul class="list-unstyled small">
+                                <li>Raspberry Pi</li>
+                                <li>GPIO Programming</li>
+                                <li>MQTT Protocol</li>
+                                <li>Hardware Interfacing</li>
+                            </ul>
+
+                            <a href="morse.html" class="btn btn-primary mt-3">Read More</a>
                         </div>
                     </article>
                 </div>
