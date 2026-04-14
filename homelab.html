@@ -69,22 +69,26 @@
 
             <h3>Layout:</h3>
             <p>
-                I currently have 2 HP elitedesk minis in a 10" server rack connected to
-                a switch. The top elitedesk has a virtualised nas (openmediavault) which is 1tb RAID 1
-                (mirrored) storage with nfs and smb sharing. Also on that machine is a virtualised k3s
-                control plane. The second machine is used as a worker as it has 3 virtualised k3s worker
-                nodes, I virtualised these just to get the experience of setting up kubernetes with
-                multiple nodes. I then have jellyfin and tailscale running as services on the k3s
-                cluster.
+                I currently run two HP EliteDesk Mini PCs mounted in a 10” server rack, connected via a network
+                switch.<br><br>
+
+                The primary machine hosts a virtualised NAS using OpenMediaVault, configured with 1TB RAID 1 (mirrored)
+                storage and providing both NFS and SMB shares. It also runs a virtualised k3s control plane.<br><br>
+
+                The second machine acts as a worker node host, running three virtualised k3s worker nodes. I set this up
+                to gain hands-on experience with managing a multi-node Kubernetes cluster.<br><br>
+
+                Within the k3s cluster, I have deployed services including Jellyfin and Tailscale.
             </p>
 
             <h3>Expansion:</h3>
             <p>
-                I plan to get more sff machines for this rack. I will use 1 as a router
-                above the switch running opnsense as i havent worked with any routers yet and i think it
-                would be enjoyale and good to know. I also plan to get more machines which i will use
-                for more k3s nodes which I will then turn all workers into baremetal instead of
-                virtualised.
+                I plan to expand the rack with additional SFF machines. One will be dedicated as a router, positioned
+                above the switch and running OPNsense, as I’d like to gain hands-on experience with network
+                routing.<br><br>
+
+                I also intend to add more machines to increase the number of k3s nodes, with the goal of transitioning
+                the worker nodes from virtualised instances to bare-metal deployments.<br><br>
             </p>
         </section>
     </main>
